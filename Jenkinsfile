@@ -13,13 +13,13 @@ node {
     }
 	
     stage('Maven Package') {
-        withMaven(maven:'maven-3.6.3'){
+        withMaven(maven:'maven-3.5.4'){
           sh 'mvn clean package'
 	}
     }
 
     stage('Build Image') {
-        app = docker.build("learntechpuzz/demo-calculator-service:${env.BUILD_NUMBER}")
+        app = docker.build("bvijaycom/demo-calculator-service:${env.BUILD_NUMBER}")
     }
 
     stage('Push Image') {
