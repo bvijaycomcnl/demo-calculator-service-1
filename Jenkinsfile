@@ -2,10 +2,10 @@ node {
     def app
 
 	def remote = [:]
-    remote.name = 'prod-server'
-    remote.host = '54.175.228.93'
-    remote.user = 'ec2-user'
-    remote.password = 'India@321'
+    remote.name = 'server2'
+    remote.host = '35.192.151.134'
+    remote.user = 'jenkins'
+    remote.password = 'redhat'
     remote.allowAnyHosts = true
     
     stage('Checkout') {
