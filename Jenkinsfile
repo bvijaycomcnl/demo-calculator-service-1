@@ -8,9 +8,8 @@ node {
     remote.password = 'redhat'
     remote.allowAnyHosts = true
     
-	options {
-		timestamps ()
-	}
+options { timestamps () }
+	
     stage('Checkout') {
         checkout scm
     }
