@@ -31,7 +31,7 @@ timestamps {
         }
     }
     stage('Deploy Container'){
- 		writeFile file: 'deploy.sh', text: "docker stop demo-calculator-service || true && docker rm demo-calculator-service || true && docker run --name demo-calculator-service -d -p 7001:7001 learntechpuzz/demo-calculator-service:$BUILD_NUMBER"
+ 		writeFile file: 'deploy.sh', text: "docker stop demo-calculator-service || true && docker rm demo-calculator-service || true && docker run --name demo-calculator-service -d -p 7001:7001 bvijaycom/demo-calculator-service:$BUILD_NUMBER"
       	sshScript remote: remote, script: "deploy.sh"   
     }
     
