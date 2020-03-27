@@ -3,7 +3,7 @@ node {
 
 	def remote = [:]
     remote.name = 'tomcat'
-    remote.host = '35.221.9.20'
+    remote.host = '35.186.180.222'
     remote.user = 'jenkins'
     remote.password = 'redhat'
     remote.allowAnyHosts = true
